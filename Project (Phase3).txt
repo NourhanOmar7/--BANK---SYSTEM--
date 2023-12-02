@@ -1,0 +1,164 @@
+ using System;
+    using System.Collections.Generic;
+
+    class Person
+    {
+        public string Name { get; set; }
+        public int Id{ get; set; }
+        public string Password { get; set; }
+    }
+
+    class Client : Person
+    {
+        public double Balance{ get; set; }
+    }
+
+    class Employee : Person
+    {
+        public double Salary{ get; set; }
+    }
+
+    class Admin : Employee
+    {
+        // Admin-specific properties can be added here
+    }
+
+    class Validation
+    {
+        public static bool ValidatePassword(string password)
+        {
+            // Implement password validation logic
+            return true; //  replace with actual logic
+        }
+    }
+
+    class ClientManager
+    {
+        public static void PrintClientMenu()
+        {
+            // Implement client menu
+        }
+
+        public static void UpdatePassword(Person person)
+        {
+            // Implement password update logic
+        }
+
+        public static Client Login(int id, string password)
+        {
+            // Implement login logic for clients
+            return new Client(); // Placeholder, replace with actual logic
+        }
+
+        public static bool ClientOptions(Client client)
+        {
+            // Implement client-specific options
+            return true; // Placeholder, replace with actual logic
+        }
+    }
+
+    class EmployeeManager
+    {
+        public static void PrintEmployeeMenu()
+        {
+            // Implement employee menu
+        }
+
+        public static void NewClient(Employee employee)
+        {
+            // Implement logic to add a new client
+        }
+
+        public static void ListAllClients(Employee employee)
+        {
+            // Implement logic to list all clients
+        }
+
+        public static void SearchForClient(Employee employee)
+        {
+            // Implement logic to search for a client
+        }
+
+        public static void EditClientInfo(Employee employee)
+        {
+            // Implement logic to edit client information
+        }
+
+        public static Client Login(int id, string password)
+        {
+            // Implement login logic for employees
+            return new Client(); // Placeholder, replace with actual logic
+        }
+
+        public static bool EmployeeOptions(Client client)
+        {
+            // Implement employee-specific options
+            return true; // Placeholder, replace with actual logic
+        }
+    }
+
+    class AdminManager
+    {
+        public static void PrintAdminMenu()
+        {
+            // Implement admin menu
+        }
+
+        public static bool AdminOptions(Client client)
+        {
+            // Implement admin-specific options
+            return true; // Placeholder, replace with actual logic
+        }
+    }
+
+    class Screens
+    {
+        public static void BankName()
+        {
+            // Implement displaying bank name
+        }
+
+        public static void Welcome()
+        {
+            // Implement welcome message
+        }
+
+        public static void LoginOptions()
+        {
+            // Implement login options
+        }
+
+        public static int LoginAs()
+        {
+            // Implement logic to get user choice for login
+            return 1; // Placeholder, replace with actual logic
+        }
+
+        public static void Invalid(int choice)
+        {
+            // Implement invalid input handling
+        }
+
+        public static void Logout()
+        {
+            // Implement logout message
+        }
+
+        public static void LoginScreen(int choice)
+        {
+            // Implement login screen based on user choice
+        }
+
+        public static void RunApp()
+        {
+            // Implement the main application logic
+        }
+    }
+
+    class Program
+    {
+        static void Main()
+        {
+            // Implement the main program flow using the classes and methods above
+        }
+    }

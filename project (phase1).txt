@@ -1,0 +1,69 @@
+
+
+
+
+
+#include <iostream>
+#include <string>
+using namespace;
+
+class Validation {
+public:
+    static bool isValidName(const std::string& name);
+    static bool isValidPassword(const std::string& password);
+    static bool isValidBalance(double balance);
+    static bool isValidSalary(double salary);
+};
+
+class Person {
+protected:
+    int id;
+    std::string name;
+    std::string password;
+
+public:
+    Person(int id, const std::string& name, const std::string& password);
+    virtual ~Person();
+
+    int getId() const;
+    const std::string& getName() const;
+    void setName(const std::string& name);
+    void setPassword(const std::string& password);
+};
+
+class Client : public Person {
+private:
+    double balance;
+
+public:
+    Client(int id, const std::string& name, const std::string& password, double balance);
+
+    void setBalance(double balance);
+    double getBalance() const;
+
+    void deposit(double amount);
+    void withdraw(double amount);
+    void transferTo(double amount, Client& recipient);
+    void checkBalance() const;
+    void display() const;
+};
+
+class Employee : public Person {
+private:
+    double salary;
+
+public:
+    Employee(int id, const std::string& name, const std::string& password, double salary);
+
+    void setSalary(double salary);
+    double getSalary() const;
+
+    void display() const;
+};
+
+class Admin : public Employee {
+public:
+    Admin(int id, const std::string& name, const std::string& password, double salary);
+
+    void display() const;
+};

@@ -1,0 +1,215 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <sstream>
+
+// Define Client class
+class Client {
+public:
+    int id;
+    std::string name;
+    std::string password;
+    double balance;
+};
+
+// Define Employee class
+class Employee {
+public:
+    int id;
+    std::string name;
+    std::string password;
+    double salary;
+};
+
+// Define Admin class
+class Admin : public Employee {
+};
+
+// Validation class
+class Validation {
+public:
+    static bool isValidPassword(const std::string& password) {
+        // Implement password validation logic
+        return true;
+    }
+};
+
+// DataSourceInterface abstract class
+class DataSourceInterface {
+public:
+    virtual void addClient(Client client) = 0;
+    virtual void addEmployee(Employee employee) = 0;
+    virtual void addAdmin(Admin admin) = 0;
+    virtual std::vector<Client> getAllClients() = 0;
+    virtual std::vector<Employee> getAllEmployees() = 0;
+    virtual std::vector<Admin> getAllAdmins() = 0;
+    virtual void removeAllClients() = 0;
+    virtual void removeAllEmployees() = 0;
+    virtual void removeAllAdmins() = 0;
+};
+
+// FileManager class to implement DataSourceInterface
+class FileManager : public DataSourceInterface {
+public:
+    void addClient(Client client) override {
+        // Implement saving client info to clients.txt
+    }
+
+    void addEmployee(Employee employee) override {
+        // Implement saving employee info to employees.txt
+    }
+
+    void addAdmin(Admin admin) override {
+        // Implement saving admin info to admins.txt
+    }
+
+    std::vector<Client> getAllClients() override {
+        // Implement retrieving data from clients.txt
+        return {};
+    }
+
+    std::vector<Employee> getAllEmployees() override {
+        // Implement retrieving data from employees.txt
+        return {};
+    }
+
+    std::vector<Admin> getAllAdmins() override {
+        // Implement retrieving data from admins.txt
+        return {};
+    }
+
+    void removeAllClients() override {
+        // Implement removing all data from clients.txt
+    }
+
+    void removeAllEmployees() override {
+        // Implement removing all data from employees.txt
+    }
+
+    void removeAllAdmins() override {
+        // Implement removing all data from admins.txt
+    }
+};
+
+// Employee class methods
+void Employee::addClient(Client& client) {
+    // Implement adding a client
+}
+
+Client Employee::searchClient(int id) {
+    // Implement searching for a client by id
+    return {};
+}
+
+void Employee::listClient() {
+    // Implement listing all clients
+}
+
+void Employee::editClient(int id, std::string name, std::string password, double balance) {
+    // Implement editing client information
+}
+
+// Admin class methods
+void Admin::addClient(Client& client) {
+    // Implement adding a client
+}
+
+Client Admin::searchClient(int id) {
+    // Implement searching for a client by id
+    return {};
+}
+
+void Admin::listClient() {
+    // Implement listing all clients
+}
+
+void Admin::editClient(int id, std::string name, std::string password, double balance) {
+    // Implement editing client information
+}
+
+void Admin::addEmployee(Employee& employee) {
+    // Implement adding an employee
+}
+
+Employee Admin::searchEmployee(int id) {
+    // Implement searching for an employee by id
+    return {};
+}
+
+void Admin::editEmployee(int id, std::string name, std::string password, double salary) {
+    // Implement editing employee information
+}
+
+void Admin::listEmployee() {
+    // Implement listing all employees
+}
+
+// Parser class
+class Parser {
+public:
+    static std::vector<std::string> split(const std::string& line) {
+        // Implement splitting a string
+        return {};
+    }
+
+    static Client parseToClient(const std::string& line) {
+        // Implement parsing a string to a Client object
+        return {};
+    }
+
+    static Employee parseToEmployee(const std::string& line) {
+        // Implement parsing a string to an Employee object
+        return {};
+    }
+
+    static Admin parseToAdmin(const std::string& line) {
+        // Implement parsing a string to an Admin object
+        return {};
+    }
+};
+
+// FilesHelper class
+class FilesHelper {
+public:
+    static void saveLast(const std::string& fileName, int id) {
+        // Implement saving the last ID to a file
+    }
+
+    static int getLast(const std::string& fileName) {
+        // Implement getting the last ID from a file
+        return 0;
+    }
+
+    static void saveClient(Client c) {
+        // Implement saving a client to a file
+    }
+
+    static void saveEmployee(const std::string& fileName, const std::string& lastidFile, Employee e) {
+        // Implement saving an employee to a file
+    }
+
+    static std::vector<Client> getClients() {
+        // Implement getting clients from a file
+        return {};
+    }
+
+    static std::vector<Employee> getEmployees() {
+        // Implement getting employees from a file
+        return {};
+    }
+
+    static std::vector<Admin> getAdmins() {
+        // Implement getting admins from a file
+        return {};
+    }
+
+    static void clearFile(const std::string& fileName, const std::string& lastidFile) {
+        // Implement clearing a file
+    }
+};
+
+int main() {
+    // Implement your main application logic here
+
+    return 0;
+}
